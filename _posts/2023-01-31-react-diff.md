@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "浅谈 ReactVueInferno 在 DOM Diff 算法上的异同"
-subtitle: "thinking react diff withinterferno"
+subtitle: "thinking react diff with vue and interferno"
 date: 2023-01-31 17:41:22
 author: linbao
 header-img: "img/post-bg-2015.jpg"
