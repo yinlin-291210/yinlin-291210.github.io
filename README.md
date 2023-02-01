@@ -1,60 +1,61 @@
-[Hux Blog](https://huangxuan.me)
-================================
+# [Hux Blog](https://huangxuan.me)
 
 > I never expect this becomes popular.
 
 ![](http://huangxuan.me/img/blog-desktop.jpg)
 
+## 本博客基于 [Hux Blog](https://huangxuan.me)
 
-[User Manual 👉](_doc/Manual.md)
---------------------------------------------------
+### 开始
 
-### Getting Started
+1. 确保你的环境安装有[Ruby](https://www.ruby-lang.org/en/)、[Bundler](https://bundler.io/)、[Jekyll](https://jekyllrb.com/)。
 
-1. You will need [Ruby](https://www.ruby-lang.org/en/) and [Bundler](https://bundler.io/) to use [Jekyll](https://jekyllrb.com/). Following [Using Jekyll with Bundler](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/) to fullfill the enviromental requirement.
+2. 安装成功后，英文好的同学可以直接看 hux blog 的文档，英文不好的同学建议不要看上面的中文文档，比较老，坑也比较多，可以先 fork 我的代码，再按下述配置。
 
-2. Installed dependencies in the `Gemfile`:
-
-```sh
-$ bundle install 
-```
-
-3. Serve the website (`localhost:4000` by default):
+3. 通过`Gemfile`下载依赖
 
 ```sh
-$ bundle exec jekyll serve  # alternatively, npm start
+$ bundle install
 ```
 
-### Development (Build From Source)
+4. 在本地启动服务（默认端口为:4000）
 
-To modify the theme, you will need [Grunt](https://gruntjs.com/). There are numbers of tasks you can find in the `Gruntfile.js`, includes minifing JavaScript, compiling `.less` to `.css`, adding banners to keep the Apache 2.0 license intact, watching for changes, etc. 
+```sh
+$ bundle exec jekyll serve # alternatively, npm start
+```
 
-Yes, they were inherited and are extremely old-fashioned. There is no modularization and transpilation, etc.
+5. 在`_config.yml`编辑基本配置
 
-Critical Jekyll-related code are located in `_include/` and `_layouts/`. Most of them are [Liquid](https://github.com/Shopify/liquid/wiki) templates.
+```yml
+# Site settings
+title: 林宝の加油站 # 站点标题
+SEOTitle: 林宝の加油站 | linbao Blog # 对搜索引擎友好标题
+header-img: img/home-bg.jpg # 默认文章背景图片路径
+email: linyin857@gmail.com # 个人邮箱
+description: "share my mind" # 个人描述
+keyword: "林宝の加油站, linbao, linbaofangxinfei, 林宝放心飞, 博客, 个人网站, 互联网, Web, JavaScript, React, React Native, Vue, 前端, Mind" # 可索引关键字
+url: "https://yinlin-291210.github.io/" # your host, for absolute URL
+baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
+```
 
-This theme uses the default code syntax highlighter of jekyll, [Rouge](http://rouge.jneen.net/), which is compatible with Pygments theme so just pick any pygments theme css (e.g. from [here](http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html) and replace the content of `highlight.less`.
+记得修改后，需要重启服务才能生效。
 
+6. 更多配置信息应参考[Hux Blog](https://huangxuan.me)或[Jekyll](https://jekyllrb.com/)官网。
 
-### Interesting to know more? Checkout the [full user manual](_doc/Manual.md)!
+### 如何推送
 
+不同于`hexo`，`jekyll`不需要本地编译，你在本地看到的效果就是最终呈现在`github pages`上的效果  
+开发者只需关注自己的文章内容，写好文章通过`git`推上去后，`github pages`会自动将文章编译成 html 推送到博客网站上。
 
-Other Resources
----------------
+### 如何快速创建文章
 
-Ports
-- [**Hexo**](https://github.com/Kaijun/hexo-theme-huxblog) by @kaijun
-- [**React-SSR**](https://github.com/LucasIcarus/huxpro.github.io/tree/ssr) by @LucasIcarus
+jekyll 是有文章命名规范的，参考[创建文章脚本](./auto-generate-post.sh)和[文档](https://yinlin-291210.github.io/2023/01/31/write-template-by-shell/)，会自动生成符合规范的文章，默认只会创建`_posts`下的文章。
 
-[Starter/Boilerplate](https://github.com/huxpro/huxblog-boilerplate)
-- Out of date. Helps wanted for updating it on par with the main repo
+### 为什么引入的图片不显示
 
-Translation
-- [🇨🇳  中文文档（有点过时）](https://github.com/Huxpro/huxpro.github.io/blob/master/_doc/README.zh.md)
+图片的路径（除外链）应该参考编译后的目录结构，由于文章编译后的目录结构比较复杂，因此推荐将图片存放在`img/in-post`下，根据文件名区分，同时，博客的所有图片都应放在`img`文件夹下。
 
-
-License
--------
+## License
 
 Apache License 2.0.
 Copyright (c) 2015-present Huxpro
