@@ -10,7 +10,6 @@ tags:
   - react
   - vue
   - front-end
-  - 技术
 ---
 
 # 浅谈 ReactVueInferno 在 DOM Diff 算法上的异同
