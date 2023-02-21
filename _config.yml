@@ -3,7 +3,7 @@ title: 林宝の加油站
 SEOTitle: 林宝の加油站 | linbao Blog
 header-img: img/home-bg.jpg
 email: linyin857@gmail.com
-description: "share my mind"
+description: "<Rap>想象是发现的本质</Rap>"
 keyword: "林宝の加油站, linbao, linbaofangxinfei, 林宝放心飞, 博客, 个人网站, 互联网, Web, JavaScript, React, React Native, Vue, 前端, Mind"
 url: "https://yinlin-291210.github.io/" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
@@ -65,7 +65,7 @@ ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "share my mind"
+sidebar-about-description: <Rap>想象是发现的本质</Rap>
 sidebar-avatar: img/me.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags

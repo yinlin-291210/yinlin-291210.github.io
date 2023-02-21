@@ -6,9 +6,18 @@
     <img src="{{site.sidebar-avatar}}" />
     {% endif %}
     {% if site.sidebar-about-description %}
-    <p>{{site.sidebar-about-description}}</p>
+    <p id="sidebar-about-description">{{site.sidebar-about-description}}</p>
     {% endif %}
     <!-- SNS Link -->
     {% include sns-links.html %}
   </div>
+  
 </section>
+{% if site.sidebar-about-description %}
+<script>
+  var description='{{site.sidebar-about-description}}';
+  (function () {
+    document.querySelector('#sidebar-about-description').innerText=description
+  })();
+</script>
+{% endif %}
