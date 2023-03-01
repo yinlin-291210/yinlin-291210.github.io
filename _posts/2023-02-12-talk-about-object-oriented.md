@@ -8,7 +8,7 @@ header-img:
 catalog: true
 tags:
   - 编程范式
-  - 面向对象
+  - OOP
 ---
 
 ## 什么是面向对象
